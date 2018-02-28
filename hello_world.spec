@@ -19,7 +19,7 @@ License:        MIT
 Summary:        test package
 Url:            https://github.com/bgeuken/hello_world
 Group:          Development/Tools/Building
-Source:         hello_world.tar.bz2
+Source0:         hello_world.rb
 Requires:       ruby
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
@@ -31,7 +31,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %install
 
-install -m 755 ${SOURCE1} %{_bindir}/%{name}
+install -m 755 %{SOURCE0} %{_bindir}/%{name}
 
 %post
 
